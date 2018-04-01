@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/layout.css">
+    <link rel="stylesheet" href="public/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/popper.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script> -->
+
+    <!-- CDN -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- --------------------------HEADER----------------------- -->
+    <div class="container-fluid" id="heder">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light" style="background: #F0F8FF">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#" style="text-align: center;">
+                    <img src="public/logo.png" alt="logo.png" style="width: 50%">
+                </a>
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Trang Chủ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nav-link">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Đăng Nhập
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nav-link">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Đăng Ký
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <!-- --------------------------END HEADER--------------------------------------- -->
+
+    <!-- ---------------------------PRODUCTS--------------------------------------------- -->
+    <!-- phần danh sách sản phẩm -->
+    <div class="container-fluid">
+        <div class="row content" style="height:700px">
+
+            <!--Phan container_menubar-->
+            <div class="col-sm-3 sidenav">
+                <div class="onleft">
+                    <div class="list-group">
+                        <div class="list-group-item active">
+                            <b>DANH MỤC</b>
+                        </div>
+                        <a href="#" class="list-group-item">Công Nghệ</a>
+                        <a href="#" class="list-group-item">Thời Trang</a>
+                        <a href="#" class="list-group-item">Làm Đẹp</a>
+                    </div>
+                    <br>
+                    <div class="list-group">
+                        <div class="list-group-item active">
+                            <b>TIÊU BIỂU</b>
+                        </div>
+                        <a href="#" class="list-group-item">Sắp Kết Thúc</a>
+                    </div>
+                </div>
+            </div>
+            <!--Ket thuc container_menubar-->
+
+            <!-- Tab panes -->
+            <div class="col-sm-9">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#tab-daugiahientai">Đấu giá hiện tại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tab-daugiathang">Đấu giá thắng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tab-daugiathua">đấu giá thất bại</a>
+                    </li>
+                </ul>
+
+
+                <div class="tab-content">
+
+                    <!-- tab đấu giá hiện tại -->
+                    <div id="tab-daugiahientai" class="container tab-pane active">
+                        <br>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Trạng thái</th>
+                                    <th>Giá thầu tối đa của bạn</th>
+                                    <th>Giá thầu cao nhất</th>
+                                    <th>Giá thầu</th>
+                                    <th>Hoàn thành</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Lost</td>
+                                    <td>Đàn aucostic [mã sp]
+                                        <br>105K</td>
+                                    <td>110K</td>
+                                    <td>9K</td>
+                                    <td>10-12-2018 17:05:00</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Lost (Win)</td>
+                                    <td>Đàn aucostic [mã sp]
+                                        <br>105K</td>
+                                    <td>110K</td>
+                                    <td>9K</td>
+                                    <td>10-12-2018 17:05:00</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Lost (Win)</td>
+                                    <td>Đàn aucostic [mã sp]
+                                        <br>105K</td>
+                                    <td>110K</td>
+                                    <td>9K</td>
+                                    <td>10-12-2018 17:05:00</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Lost (Win)</td>
+                                    <td>Đàn aucostic [mã sp]
+                                        <br>105K</td>
+                                    <td>110K</td>
+                                    <td>9K</td>
+                                    <td>10-12-2018 17:05:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> <!-- end tab đấu giá hiện tại -->
+
+                    <!-- tab đấu giá thắng -->
+                    <div id="tab-daugiathang" class="container tab-pane fade">
+                        <br>
+                        <!-- table-{1:striped|sm|bordered|hover|inverse} -->
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Trạng thái</th>
+                                    <th>Giá thầu thắng</th>
+                                    <th>Hoàn thành</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Win/Lost</td>
+                                    <td>Đàn guitar [ma sp]
+                                        <br>105K</td>
+                                    <td>5-7-2015 10:23:15</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Win/Lost</td>
+                                    <td>Đàn guitar [ma sp]
+                                        <br>105K</td>
+                                    <td>5/7/2015 10:23:15</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Win/Lost</td>
+                                    <td>Đàn guitar [ma sp]
+                                        <br>105K</td>
+                                    <td>5/7/2015 10:23:15</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Win/Lost</td>
+                                    <td>Đàn guitar [ma sp]
+                                        <br>105K</td>
+                                    <td>5/7/2015 10:23:15</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> <!-- end tab đấu giá thắng -->
+
+                    <!-- tab đấu giá thua -->
+                    <div id="tab-daugiathua" class="container tab-pane fade">
+                        <br>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Trạng thái</th>
+                                    <th>Giá thầu thua</th>
+                                    <th>Hoàn thành</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Win/Lost</td>
+                                    <td>Đàn guitar [ma sp]
+                                        <br>105K</td>
+                                    <td>5-7-2015 10:23:15</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Win/Lost</td>
+                                    <td>Đàn guitar [ma sp]
+                                        <br>105K</td>
+                                    <td>5/7/2015 10:23:15</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Win/Lost</td>
+                                    <td>Đàn guitar [ma sp]
+                                        <br>105K</td>
+                                    <td>5/7/2015 10:23:15</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Win/Lost</td>
+                                    <td>Đàn guitar [ma sp]
+                                        <br>105K</td>
+                                    <td>5/7/2015 10:23:15</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> <!-- end tab đấu giá thua -->
+                </div> <!-- end tab panes-->
+                
+
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------END PRODUCTS-------------------------------------------- -->
+
+</body>
+
+</html>

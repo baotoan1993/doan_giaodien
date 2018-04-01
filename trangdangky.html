@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/layout.css">
+    <link rel="stylesheet" href="public/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/popper.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script> -->
+
+    <!-- CDN -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- --------------------------HEADER----------------------- -->
+    <div class="container-fluid" id="header">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light" style="background: #F0F8FF">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#" style="text-align: center;">
+                    <img src="public/logo.png" alt="logo.png" style="width: 50%">
+                </a>
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Trang Chủ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nav-link">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Đăng Nhập
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nav-link">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Đăng Ký
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <!-- --------------------------END HEADER--------------------------------------- -->
+
+
+    <!-- ---------------------------REGISTER--------------------------------------------- -->
+    <!-- form dang ky -->
+    <div class="container-fluid">
+        <form class="form-horizontal" role="form" method="POST" action="/login">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h2>Đăng Ký Tài Khoản</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group has-danger">
+                        <label class="sr-only" for="email">Your name</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input type="text" name="userName" class="form-control" id="text" placeholder="Tên của bạn" required autofocus>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group has-danger">
+                        <label class="sr-only" for="email">E-Mail Address</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem">
+                                <i class="fa fa-at"></i>
+                            </div>
+                            <input type="text" name="email" class="form-control" id="email" placeholder="email@example.com" required autofocus>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="password">Password</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem">
+                                <i class="fa fa-key"></i>
+                            </div>
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Mật khẩu" required>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="password">Confirm</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem">
+                                <i class="fa fa-key"></i>
+                            </div>
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Nhập lại Mật khẩu" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                            <!-- Put password error message here -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+
+            </div>
+            <div class="row" style="padding-top: 1rem">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 text-center">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa fa-check"></i> Đăng Ký</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- ------------------------END REGISTER-------------------------------------------- -->
+
+</body>
+
+</html>

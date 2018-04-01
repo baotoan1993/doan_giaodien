@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/layout.css">
+    <link rel="stylesheet" href="public/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/popper.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script> -->
+
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<script>
+    $(document).ready(() => {
+        var ct = 2;
+        $('#btnThemChiTiet').tooltip({ title: "Thêm mô tả Sản Phẩm" })
+        $('#btnXoaChiTiet').tooltip({ title: "Xoá mô tả sản phẩm" })
+
+        $('#btnThemChiTiet').click(() => {
+            var append = '<div class="form-group col-md-9" id="txtChiTiet' + ct + '"><input type="text" class="form-control"  placeholder="chi tiết ' + ct + '"></div>';
+            $('#div_ThemChiTiet .form-row').append(append);
+            ct++;
+        })
+
+        $('#btnXoaChiTiet').click(() => {
+            if (ct == 2)
+                return;
+            $('#txtChiTiet' + (ct - 1)).remove()
+            ct--;
+        })
+    })
+</script>
+
+<body>
+    <!-- --------------------------HEADER----------------------- -->
+    <div class="container-fluid" id="header">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light" style="background: #F0F8FF">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#" style="text-align: center;">
+                    <img src="public/logo.png" alt="logo.png" style="width: 50%">
+                </a>
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Trang Chủ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nav-link">
+                                <i class="fa fa-product-hunt" aria-hidden="true"></i>&nbsp;Sản Phẩm
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nav-link">
+                                <i class="fa fa-table" aria-hidden="true"></i>&nbsp;Hoá Đơn
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nav-link">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Thoát
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <!-- --------------------------END HEADER--------------------------------------- -->
+
+    <!-- ---------------------------PRODUCTS--------------------------------------------- -->
+    <!-- phần danh sách sản phẩm -->
+    <div class="container-fluid">
+        <div class="row content" style="height:700px">
+
+            <!--Phan container_menubar-->
+            <div class="col-sm-3 sidenav">
+                <div class="onleft">
+                    <div class="list-group">
+                        <div class="list-group-item active">
+                            <b>DANH MỤC</b>
+                        </div>
+                        <a href="#" class="list-group-item">Công Nghệ</a>
+                        <a href="#" class="list-group-item">Thời Trang</a>
+                        <a href="#" class="list-group-item">Làm Đẹp</a>
+                    </div>
+                </div>
+            </div>
+            <!--Ket thuc container_menubar-->
+
+            <div class="col-sm-9">
+                <div class="list-group-item bg-info text-white" style="margin-bottom:10px;">
+                    <b>
+                        <span>CẬP NHẬT</span>
+                    </b>
+                </div>
+                <div class="row" style="overflow: scroll; height: 400px;">
+                    <div class="col-sm-4">
+                        <img src="public/hinh5.jpg" alt="hinh chi tiet" style="width: 80%">
+                        <button class="btn btn-warning" style="margin-top: 10px">Đổi ảnh</button>
+                    </div>
+
+                    <div class="col-sm-8">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-9">
+                                    <label for="txtTenSP">Tên Sản Phẩm:</label>
+                                    <input type="text" class="form-control" id="txtTenSP" placeholder="Tên Sản Phẩm">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-sm-9">
+                                    <label for="txtTenSP">Loại Sản Phẩm:</label>
+                                    <select name="" id="slLoaiSanPham" class="form-control">
+                                        <option value="CongNghe">Công Nghệ</option>
+                                        <option value="ThoiTrang">Thời Trang</option>
+                                        <option value="LamDep">Làm Đẹp</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="inputHour">Giờ</label>
+                                    <input type="number" class="form-control" id="inputHour" value="0" min="0">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputMinute">Phút</label>
+                                    <input type="number" class="form-control" value="0" min="0" max="59">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputSecond">Giây</label>
+                                    <input type="number" class="form-control" id="inputSecond" value="15" min="15" max="59">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="numMucGia">Định mức giá (VNĐ):</label>
+                                    <input type="number" class="form-control" id="numDinhMuc" min="1" step="3" value="1">
+                                </div>
+                            </div>
+
+                            <div id="div_ThemChiTiet">
+                                <div class="form-row">
+                                    <div class="form-group col-md-9">
+                                        <input type="text" class="form-control" id="txtChiTiet1" placeholder="chi tiết 1">
+                                    </div>
+                                    <div>
+                                        <input type="button" id="btnThemChiTiet" class="form-control btn btn-success" value="+">
+                                    </div>&nbsp;
+                                    <div>
+                                        <input type="button" id="btnXoaChiTiet" class="form-control btn btn-danger" value="-">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Cập nhật</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="list-group-item bg-info text-white" style="margin: 10px 0 10px 0;">
+                            <b>THÔNG TIN SẢN PHẨM</b>
+                        </div>
+                        <div>
+                            <h3>ÁO BÈO TRỄ VAI</h3>
+                            <p>chi tiết</p>
+                            <ul>
+                                <li>Vải : Voan dày</li>
+                                <li>Size : freeszie dưới 54kg, vòng ngực dưới 90cm</li>
+                                <li>Màu : đen, trắng, hồng</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------END PRODUCTS-------------------------------------------- -->
+
+</body>
+
+</html>
